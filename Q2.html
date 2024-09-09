@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter Number <input type="number" id="1">
+    <button onclick="pattern() ">Click</button>
+    <p id="2"></p>
+    <script>
+        function pattern() {
+            var a = document.getElementById('1').value;
+            for (var i = 1; i <= a; i++) {
+                for (var j = 1; j <= i; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+                // document.getElementById('2').innerHTML += row + '<br>'
+            }
+        }
+    </script>
+
+</body>
+
+</html>

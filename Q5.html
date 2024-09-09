@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .long-word {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body onload="highlightLongWords()">
+    <h1>Heading</h1>
+    <p>Hey, you're not permitted in there. It's restricted . You'll
+        be deactivated for sure. Don't call me a mindless philosopher, you overweight glob of grease!
+        Now come out before sombody sees you. Secret mission? What plans? I'm not in there!
+        I'm going to regret this. There gores one. Hold your fire. There are no life forms. it must have been
+        short-circuited. That's funny, the damage
+        doesn't look as bad from out here. Are you sure this things safe ?
+    </p>
+    <script>
+        function highlightLongWords() {
+            const a = document.querySelectorAll('p');
+
+            a.forEach(function (paragraph) {
+                const words = paragraph.textContent.split(" ");
+                let htmlContent = '';
+
+                words.forEach(function (word) {
+                    const cleanedWord = word.replace(/[^a-zA-Z0-9]/g, '');
+                    if (cleanedWord.length >= 7) {
+                        htmlContent += `<span class="long-word">${word}</span>`;
+                    } else {
+                        htmlContent += word;
+                    }
+                    htmlContent += ' ';
+                });
+
+                htmlContent = htmlContent.trim();
+
+
+                paragraph.innerHTML = htmlContent;
+            });
+        }
+    </script>
+</body>
+
+</html>

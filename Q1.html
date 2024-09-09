@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+</head>
+
+<body>
+    <label for="inputString">Enter String:</label>
+    <input type="text" id="inputString">
+    <button onclick="countVowels()">Count Vowels</button>
+    <p id="result"></p>
+
+    <script>
+        function countVowels() {
+            var input = document.getElementById('inputString').value;
+            var input1 = input.toLowerCase();
+            var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+            var count = 0;
+
+            for (var i = 0; i < input1.length; i++) {
+                for (var j = 0; j < vowels.length; j++) {
+                    if (input1[i] === vowels[j]) {
+                        count++;
+                        break;
+                    }
+                }
+            }
+
+            document.getElementById("result").innerHTML = "The sentence contains " + count + " vowels.";
+        }
+    </script>
+
+</body>
+
+</html>

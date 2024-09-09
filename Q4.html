@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="1"></p>
+    <script>
+        function armstrong(i) {
+            var j = i;
+            var add = 0;
+            while (i > 0) {
+                var last = i % 10;
+                var power = Math.pow(last, 3);
+                var add = add + power;
+                i = Math.floor(i / 10);
+            }
+            return add === j;
+        }
+        for (var i = 100; i <= 999; i++) {
+            if (armstrong(i)) {
+                document.getElementById("1").innerHTML += i + "<br>"
+                // document.write(i+"<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="emojis()">
+    <p id="1">"Hey, you're not permitted in there. It's restricted. You'll
+        be deactivated for sure. Don't call me a mindless philosopher glob of grease!
+        Now come out before sombody sees you. Secret mission? What plans? I'm not getting in there!
+        I'm going to regret this. Aaah... This is a consular ship. Were on a diplomatic mission. If this is a consular
+        ship...were
+        is the Ambassador? Commander, tear this ship apart untill you've found those plans and bring me the Ambassador.
+        I want her alive!
+        There she is! Set for stun! She'll be all right. Inform lord Vader we have a prisoner. What a piece of junk.
+        She'll make point five beyond
+        the speed of light. She may not like much, but she's got it where it counts, kid. I've added some special
+        modifications myself.
+        We're a listtle rushed, so if you'll hurry aboard we'll get out of hee. Hello, sir. Which way? All right, men.
+        Load your weapons! Stop that ship! Blast
+        'em! Chewie, get us out of here! Oh, my. I'd forgotten how much i hate space travel. run, Luke! Run!"
+    </p>
+    <script>
+        function emojis() {
+            const paragraph = document.getElementById('1');
+            const textContent = paragraph.textContent;
+            const smileReplaced = textContent.replace(/!/g, '😲');
+
+
+            const finalText = smileReplaced.replace(/\?/g, '🤔');
+
+            paragraph.innerHTML = `"${finalText}"`;
+        }
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>

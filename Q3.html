@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Modifier</title>
+</head>
+
+<body>
+    <label for="inputString">Enter String:</label>
+    <input type="text" id="inputString">
+    <button onclick="modifyString()">Click</button>
+    <p id="result"></p>
+
+    <script>
+        function modifyString() {
+            var input = document.getElementById("inputString").value;
+            var output;
+            if (input.length > 5) {
+                var firstFive = input.slice(0, 5).toLowerCase();
+                var restOfString = input.slice(5);
+                output = firstFive + restOfString;
+            } else {
+                output = input.toUpperCase();
+            }
+
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+
+</html>
